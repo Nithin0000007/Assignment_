@@ -1,0 +1,13 @@
+<%- include('../partials/header') %>
+
+    <h3>show page for user <%= userDetails.username %></h3>
+
+    <ul>
+        <li><%= userDetails.username %></li>
+        <li><%= userDetails.mobNo %></li>
+    </ul>
+    <a href="/users/<%= userDetails._id %>/change-password"><button class="btn btn-warning">change password</button></a>
+    <form action="/users/<%= userDetails._id %>?_method=delete" method="post">
+        <button type="submit" class="btn btn-danger">Delete</button>
+</form>
+<%- include('../partials/footer') %>

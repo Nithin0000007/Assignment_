@@ -1,0 +1,7 @@
+<%- include('../partials/header') %>
+<form action= "/users/<%= userDetails._id %>" method="post">
+    <input type="email" name="" id="" value="<%= userDetails.username %>" readonly disabled>
+    <input type='password' name="newPassword" placeholder="Set new password">
+    <button type="submit" class="btn btn-success">Set password</button>
+</form>
+<%- include('../partials/footer') %>
